@@ -21,9 +21,12 @@ void draw() {
   background(51);
   stroke(255);
   noFill();
+  lights();
   
   translate(width / 2, height / 2);
   rotateX(a);
+  rotateY(a * 0.4);
+  rotateZ(a * 0.1);
   for (Box b : sponge) {
     b.show();
   }

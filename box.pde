@@ -15,21 +15,22 @@ class Box {
           
           int sum = abs(x) + abs(y) + abs(z);
           float newR = r / 3;
-          if (sum <= 1) { 
+          if (sum > 1) { 
             Box b = new Box(pos.x + x * newR,pos.y + y * newR,pos.z + z * newR, newR); 
             boxes.add(b);
           }
-         }
-       }
-     } 
-     return boxes;
-   }
-   
-   void show() {
-     pushMatrix();
-     translate(pos.x, pos.y, pos.z);
-     box(r);
-     popMatrix();
-   }
- }
- 
+        }
+      }
+    } 
+    return boxes;
+  }
+  
+  void show() {
+    pushMatrix();
+    translate(pos.x, pos.y, pos.z);
+    noStroke();
+    fill(255);
+    box(r);
+    popMatrix();
+  }
+}
