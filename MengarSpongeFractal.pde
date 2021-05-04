@@ -9,7 +9,11 @@ void setup() {
 }
 
 void mousePressed() {
-  ArrayList<Box> next = sponge.get(0).generate();
+  ArrayList<Box> next = new ArrayList<Box>();
+  for (Box b : sponge) {
+    ArrayList<Box> newBoxes = b.generate();
+    next.addAll(newBoxes);
+  }
   sponge = next;
 }
 
