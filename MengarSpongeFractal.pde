@@ -1,6 +1,8 @@
 float a = 0;
+Box b;
 void setup() {
   size(400,400, P3D);
+  b = new Box(0,0,0,200);
 }
 
 void draw() {
@@ -10,7 +12,7 @@ void draw() {
   
   translate(width / 2, height / 2);
   rotateX(a);
-  box(200);
+  b.show();
   
   a += 0.01;
 }
