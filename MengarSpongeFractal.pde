@@ -8,6 +8,11 @@ void setup() {
   sponge.add(b);
 }
 
+void mousePressed() {
+  ArrayList<Box> next = sponge.get(0).generate();
+  sponge = next;
+}
+
 void draw() {
   background(51);
   stroke(255);
